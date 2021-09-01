@@ -1,33 +1,50 @@
 /* -------  General Styles ------- */
 
 body {
-  font-family: "Lato", sans-serif;
-}
+  font-family: "Spartan", sans-serif;
+  }
 
 h2 {
-  font-size: 26px;
+  font-size: 32px;
   font-weight: 400;
   margin: 0 10px 10px 10px;
   text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 h3 {
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 500;
 }
 
 p {
   line-height: 1.5em;
   margin: 0;
+  font-size: 20px;
 }
 
 section {
   padding: 20px;
+  background-color: #fafaff;
+  color: #1e2749;
+}
+
+li {
+  font-size: 16px;
 }
 
 section.alternate-background {
-  background-color: #00a699;
-  color: #fff;
+  background-color: #e4d9ff;
+  color: #1e2749;
+}
+
+img.about-images{
+  display: flex;
+  flex-direction: row;
+  width: 25%;
+  justify-content: space-evenly;
+
 }
 
 main img {
@@ -50,18 +67,37 @@ main img {
   flex: 2;
 }
 
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-group img{
+  width: 100%;
+  padding: 8px 0;
+}
+
+.ideas-group img {
+  width: 100%;
+}
+
+.host-group img {
+  width: 100%;
+}
+
 /* -------  Navigation ------- */
 
 header {
-  background-color: #ff385c;
-  padding: 20px 20px 0 20px;
+  background-color: #30343f;
+  padding: 30px 30px 0 30px;
   text-align: center;
 }
 
 .logo {
-  font-family: "Pangolin", cursive;
+  font-family: "Spartan", sans-serif;
   font-size: 72px;
-  color: #fff;
+  color: #fafaff;
 }
 
 header nav ul li {
@@ -69,7 +105,7 @@ header nav ul li {
 }
 
 header nav ul li a {
-  color: #fff;
+  color: #fafaff;
   text-decoration: none;
   padding: 0 20px 0 0;
 }
@@ -79,15 +115,21 @@ header nav ul li a:hover {
   text-decoration: none;
 }
 
+header nav ul {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 15px;
+}
+
 /* -------  Search Form ------- */
 form {
-  border: 2px solid #ff385c;
+  border: 2px dashed #273469;
   padding: 10px;
-}
+ }
 
 form label {
   font-weight: bold;
-}
+ }
 
 form select,
 form input {
@@ -96,24 +138,165 @@ form input {
 }
 
 form button {
-  background-color: #ff385c;
+  background-color: #273469;
   border: none;
-  color: #fff;
+  color: #fafaff;
   font-size: 24px;
   padding: 15px;
   width: 100%;
 }
 
+.form-group{
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  font-size: 20px
+}
+
+.form-item{
+  padding: 5px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: stretch;
+}
+
+.form-item input {
+  min-width: 200px;
+}
+
 /* -------  Footer ------- */
 
 footer {
-  background-color: #ff385c;
+  background-color: #30343f;
 }
 
 footer p {
-  color: #fff;
+  color: #fafaff;
   text-align: center;
   padding: 20px;
 }
 
 /* -------  Media Query ------- */
+
+/* --- DESKTOP --- */
+
+@media all and (min-width: 480px) {
+
+/* --- GENERAL STYLES --- */
+
+h2 {
+  font-size: 40px;  
+}
+
+/* --- HEADER --- */
+
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+ 
+   .logo {
+    padding-bottom: 5px;
+  }
+
+/* --- NAVIGATION --- */
+
+  header nav {
+    display: flex;
+  }
+  
+  header nav ul {
+    margin: auto;
+  }
+
+  header nav ul li {
+    font-size: 22px;
+  }
+
+/* --- SEARCH FORM --- */
+
+  .form-group {
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 2;
+    margin: auto;
+    flex-wrap: wrap;
+  }
+
+  .form-item {
+    padding: 10px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: -17px;
+    margin-right: auto;
+  }
+ 
+  form button {
+    max-width: 150px;
+    flex-wrap: wrap;
+    margin: auto;
+  }
+
+  /* --- GROUPS & ITEMS --- */
+
+  /* --- ABOUT --- */ 
+  .about-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about-item-1 {
+    flex-basis: 25%;
+    padding-right: 10px;
+  }
+
+  .about-item-2 {
+    flex-basis: 50%;
+    padding: 0 0 0 10px;
+  }
+
+  /* --- IDEAS --- */
+
+  .ideas-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0 0 10px;
+  }
+
+  .ideas-item-1,
+  .ideas-item-2 {
+    flex-basis: 50%;
+  }
+
+    /* --- HOST --- */
+
+  .host-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .host-item-1 {
+    flex: 1;
+    padding-right: 10px;
+  }
+
+  .host-item-1 ul li {
+    font-size: 18px;
+  }
+
+  .host-item-2 {
+    width: 100%;
+    flex-basis: 50%;
+  }
+
+}
