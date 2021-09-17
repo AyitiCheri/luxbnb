@@ -185,7 +185,7 @@ footer p {
 
 /* --- DESKTOP --- */
 
-@media all and (min-width: 1000px) {
+@media all and (min-width: 480px) {
 
 /* --- GENERAL STYLES --- */
 
@@ -219,28 +219,32 @@ h2 {
   }
 
 /* --- SEARCH FORM --- */
+#stay {
+  width: 100%
+}
 
-  .form-group {
-    display: flex;
-    flex-direction: row;
-    flex-shrink: 2;
-    margin: auto;
-    flex-wrap: wrap;
-  }
+form {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 
   .form-item {
-    padding: 10px;
-    flex-wrap: wrap;
+    display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: -17px;
-    margin-right: auto;
-  }
+    }
+
+form select,
+form input {
+      margin-bottom: 20px;
+      width: 180px;
+    }
  
-  form button {
+form button {
     max-width: 150px;
-    flex-wrap: wrap;
-    margin: auto;
+    padding: 0px 40px;
+    margin: 10px 5px;
   }
 
   /* --- GROUPS & ITEMS --- */
@@ -305,3 +309,4 @@ h2 {
   }
 
 }
+
